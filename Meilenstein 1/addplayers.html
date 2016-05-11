@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <title>The Brainz | Add players </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="design/style.css">
+    <link rel="icon" href="img/favicon.ico">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+<header>
+    <ul>
+        <li><a href="home.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        <li><a class="active" href="addplayers.html"><i class="fa fa-user-plus" aria-hidden="true"></i> add player</a>
+        </li>
+        <li><a href="players.html"><i class="fa fa-users" aria-hidden="true"></i> players</a></li>
+    </ul>
+
+    <div>
+        <h1 id="title">The Brainz</h1>
+    </div>
+</header>
+<main>
+    <section id="formular">   
+	<form action="http://martinakraus.net/createPlayer.php" method="GET" name="player">
+    <p>    
+        <label for="vname">Vorname:</label>
+        <input type="text" name="vorname" id="vname" pattern="[A-ZÄÖÜa-zß-ü]+"required /><br>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" pattern="[A-ZÄÖÜa-zß-ü]+"required /><br>
+        <label for="verein">Verein: </label>
+        <input type="text" name="verein" id="verein" pattern="[A-ZÄÖÜa-zß-ü]+"required /><br> 
+        <label for="hcoach">Hcoach:</label>
+        <input type="text" name="hcoach" id="headcoach" pattern="[A-ZÄÖÜa-zß-ü]+"required /><br>
+        <label for="assist">Acoach:</label>
+        <input type="text" name="acoach" id="assist" pattern="[A-ZÄÖÜa-zß-ü]+"required /><br>
+        <label for="aktiv">Aktiv:</label>
+        <input type="checkbox" name="aktiv" id="aktiv" /><br>
+        <label for="position">Position:</label>
+        <select name="position" id="pos_style">
+            <option value="Wing">Wing</option>    
+            <option value="Guard">Guard</option>
+            <option value="Power Forward">Power Forward</option>
+            <option value="Center">Center</option>
+            <option value="Small Forward">Small Forward</option>    
+        </select> <br>
+        <label for="Rückennummer">Number:</label>
+        <input type="number" name="number" id="rücken_nr" min="4" max="15" required /><br>
+        <label for="gebJahr">Jahr:</label>
+        <input type="number" name="jahr" id="gebJahr" min="1900" max="2016" required/><br>
+        <label for="fav">Favorit:</label>
+        <input type="checkbox" name="favorit" id="fav" /><br>
+        <input type="submit" name="submit"  value="Submit" id="los"><br>
+    </p>
+        </form>
+ </section>
+         
+</main>
+<footer id="footer">
+    <a href="addplayers.html"><img alt="self-Logo" src="img/brainz.png"></a>
+</footer>
+</body>
+</html>         

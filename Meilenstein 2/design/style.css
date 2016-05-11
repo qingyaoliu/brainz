@@ -1,0 +1,252 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    color: #ffffff;
+    background-image: url(Background01.jpg);
+    opacity: 0.8;
+}
+
+header {
+    width: 100%;
+    padding: 100px 0px;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    height: 150px;
+    border-bottom: 2px solid #E77D04;
+}
+
+#title {
+    text-align: center;
+    font-size: 60px;
+    text-decoration: overline;
+    font-family: cursive;
+    font-style: italic;
+    font-variant: small-caps;
+}
+
+/*
+ * Nav
+ */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 20px;
+    font-style: italic;
+    background-color: #333;
+    position: absolute;
+    width: 100%;
+    top: 139px;
+    padding-left: 570px;
+}
+
+@media screen and (min-width: 1600px) {
+    ul {
+        padding-left: 770px;
+    }
+}
+
+li {
+    float: left;
+    border-right: 2px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #E77D04;
+}
+
+.active {
+    background-color: #E77D04;
+}
+
+/*
+ * Formular
+ */
+
+#formular {
+    background-image: url('./basketball_wallpaper2.jpg');
+    font-weight: 700;
+    height: 550px;
+    border-bottom: 2px solid #E77D04
+}
+
+#pos_style {
+    width: 156px;
+    margin-left: 3px;
+}
+
+form option {
+    width: 130px
+}
+
+input {
+    width: 150px;
+    padding: 3px;
+    border: 1px solid #5F0000;
+    margin: 3px 0;
+}
+
+form {
+    text-align: center;
+    padding-top: 100px;
+    margin-right: -140px;
+}
+
+form label {
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    cursor: pointer;
+}
+
+input#los {
+    background-color: #E77D04;
+    font-weight: 700;
+}
+
+input#los:hover {
+    background-color: #E77D04;
+    font-weight: 700;
+    border-radius: 60px;
+}
+
+/*
+ * Tabelle
+ */
+
+#tabelle {
+    font-weight: 700;
+    height: 550px;
+    border-bottom: 2px solid #E77D04
+}
+
+table {
+    border: 1px solid;
+    text-align: center;
+    position: absolute;
+    top: 215px;
+    left: 250px;
+    border-collapse: collapse;
+}
+
+@media screen and (min-width: 1600px) {
+    table {
+        left: 500px;
+    }
+}
+
+td, th {
+    border: 1px solid;
+    width: 150px;
+}
+
+tr {
+    height: 50px;
+}
+
+th.active {
+    background-color: #E77D04;
+}
+
+
+
+/*
+ *  Home  
+ */
+
+#home {
+    font-weight: 700;
+    height: 550px;
+    border-bottom: 2px solid #E77D04;
+}
+
+.row {
+    display: inline-block;
+    margin-top: 125px;
+    margin-left: 150px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+@media screen and (min-width: 1600px) {
+    .row {
+        margin-left: 300px;
+    }
+}
+
+.team {
+    font-size: 25px;
+}
+
+#description {
+    border: 4px solid white;
+    border-radius: 50%;
+    line-height: 1.5;
+    width: 95px;
+    height: 95px;
+    font-size: 65px;
+}
+
+#description:hover {
+    color: #E77D04;
+    border: 4px solid #E77D04;
+}
+
+#like {
+    margin-right: 10px;
+}
+
+#farbe {
+    color: #E77D04;
+}
+
+#veggie {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 40px;
+    right: 10px;
+    opacity: 0.5;
+    border-radius: 60%;
+
+}
+
+/*
+ * Footer
+ */
+
+footer {
+    width: 100%;
+    height: 200px;
+}
+
+footer a {
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+}
+
+footer a img {
+    width: 100%;
+}
+
+
