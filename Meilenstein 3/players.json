@@ -1,0 +1,222 @@
+[
+  {
+    "_id": "575709f4f2af4503fac53d6e",
+    "name": "Caldwell",
+    "vorname": "Alexandra",
+    "club": "HAYNES",
+    "coach": "Paula Butler",
+    "position": "Guard",
+    "number": 0,
+    "year": 1996,
+    "favorit": false
+  },
+  {
+    "_id": "575709f47a4aa97916e9a21e",
+    "name": "Mendoza",
+    "vorname": "Mai",
+    "club": "GILBERT",
+    "coach": "English Mayo",
+    "position": "Wing",
+    "number": 2,
+    "year": 1999,
+    "favorit": false
+  },
+  {
+    "_id": "575709f4f3e652a2ff4f45cf",
+    "name": "Velazquez",
+    "vorname": "Patty",
+    "club": "CHASE",
+    "coach": "Lenora Solomon",
+    "position": "Center",
+    "number": 10,
+    "year": 1993,
+    "favorit": true
+  },
+  {
+    "_id": "575709f41fc722c2437f1b8a",
+    "name": "Weiss",
+    "vorname": "Pearlie",
+    "club": "KIRBY",
+    "coach": "Mueller Olsen",
+    "position": "Wing",
+    "number": 8,
+    "year": 1989,
+    "favorit": true
+  },
+  {
+    "_id": "575709f4ce5923ecfbd011b6",
+    "name": "Mclean",
+    "vorname": "Natasha",
+    "club": "FOREMAN",
+    "coach": "Cabrera Lindsay",
+    "position": "Guard",
+    "number": 4,
+    "year": 1994,
+    "favorit": false
+  },
+  {
+    "_id": "575709f4f90e9c9913cd00bd",
+    "name": "Strickland",
+    "vorname": "Little",
+    "club": "POLLARD",
+    "coach": "Dudley Hart",
+    "position": "Center",
+    "number": 6,
+    "year": 1988,
+    "favorit": true
+  },
+  {
+    "_id": "575709f494ce400a8b9889b6",
+    "name": "Herring",
+    "vorname": "Mcpherson",
+    "club": "RODGERS",
+    "coach": "Glover Rutledge",
+    "position": "Guard",
+    "number": 9,
+    "year": 1989,
+    "favorit": true
+  },
+  {
+    "_id": "575709f4a4e0ffb9cb597afd",
+    "name": "Welch",
+    "vorname": "Opal",
+    "club": "LARSON",
+    "coach": "Gentry Mack",
+    "position": "Power Forward",
+    "number": 6,
+    "year": 1989,
+    "favorit": false
+  },
+  {
+    "_id": "575709f4b72e7ae9966fbfa6",
+    "name": "Fry",
+    "vorname": "Hilary",
+    "club": "MOONEY",
+    "coach": "Keisha Copeland",
+    "position": "Power Forward",
+    "number": 10,
+    "year": 1995,
+    "favorit": true
+  },
+  {
+    "_id": "575709f40d0c243621a3960b",
+    "name": "Camacho",
+    "vorname": "Curry",
+    "club": "TOWNSEND",
+    "coach": "Marquez Simmons",
+    "position": "Small Forward",
+    "number": 2,
+    "year": 1997,
+    "favorit": false
+  },
+  {
+    "_id": "575709f418dbb0ac5ee4f92d",
+    "name": "Hutchinson",
+    "vorname": "Marlene",
+    "club": "LONG",
+    "coach": "Finch Lee",
+    "position": "Wing",
+    "number": 8,
+    "year": 1999,
+    "favorit": true
+  },
+  {
+    "_id": "575709f4692ba12b492872ca",
+    "name": "Gates",
+    "vorname": "Ellison",
+    "club": "REED",
+    "coach": "Luz Campbell",
+    "position": "Small Forward",
+    "number": 5,
+    "year": 1988,
+    "favorit": false
+  },
+  {
+    "_id": "575709f466db4aab3c75838e",
+    "name": "House",
+    "vorname": "Navarro",
+    "club": "SINGLETON",
+    "coach": "Thomas Booker",
+    "position": "Power Forward",
+    "number": 9,
+    "year": 1998,
+    "favorit": false
+  },
+  {
+    "_id": "575709f4ff201136d33270af",
+    "name": "Frank",
+    "vorname": "Greta",
+    "club": "HAYS",
+    "coach": "Elnora Mullins",
+    "position": "Wing",
+    "number": 8,
+    "year": 1989,
+    "favorit": false
+  },
+  {
+    "_id": "575709f4e9ef077e4f9c30cf",
+    "name": "Blackwell",
+    "vorname": "Lilly",
+    "club": "MCCRAY",
+    "coach": "Johns Buckner",
+    "position": "Small Forward",
+    "number": 1,
+    "year": 1999,
+    "favorit": false
+  },
+  {
+    "_id": "575709f4f20ce5d3adb3c763",
+    "name": "Barry",
+    "vorname": "Medina",
+    "club": "SHEPPARD",
+    "coach": "Joni Randall",
+    "position": "Wing",
+    "number": 0,
+    "year": 1995,
+    "favorit": true
+  },
+  {
+    "_id": "575709f45c7d89494a84942f",
+    "name": "Harding",
+    "vorname": "Miriam",
+    "club": "SOLIS",
+    "coach": "Reed William",
+    "position": "Small Forward",
+    "number": 10,
+    "year": 1989,
+    "favorit": false
+  },
+  {
+    "_id": "575709f4879f7201c476c4cb",
+    "name": "Navarro",
+    "vorname": "Lesa",
+    "club": "BARTON",
+    "coach": "Cherie Sloan",
+    "position": "Wing",
+    "number": 3,
+    "year": 1990,
+    "favorit": true
+  },
+  {
+    "_id": "575709f456dcc8d33fc0be8e",
+    "name": "Drake",
+    "vorname": "Gena",
+    "club": "HAWKINS",
+    "coach": "Shawna Boyd",
+    "position": "Center",
+    "number": 3,
+    "year": 1988,
+    "favorit": false
+  },
+  {
+    "_id": "575709f418c84ffc36bd051b",
+    "name": "Gay",
+    "vorname": "Williams",
+    "club": "SMALL",
+    "coach": "Myrtle Lane",
+    "position": "Center",
+    "number": 2,
+    "year": 1988,
+    "favorit": true
+  }
+]
