@@ -1,9 +1,28 @@
-const express = require('express'); 
-
-//Neues Express Objekt
+var express = require('express');
 var app = express();
-app.get('/', function(req,res) {
-    res.send("Hallo aus Express");
+var fs=require('fs');
+
+app.get('/home', function (req, res) {
+    res.send('Hello Home!');
 });
 
-app.listen(3000);
+app.get('/api/players',(req,res) =>{
+    fs.readFile('./players.json','utf-8',(err,data)=>{
+    console.log(data);
+res.send(data);
+})
+})
+
+app.get('/api/players/fav',(req,res) =>{
+    fs.readFile('./players.json','utf-8',(err,data)=>{
+    console.log(data);
+data.filter('favorit'===true);
+res.send(data);
+})
+})
+app.get('/', function (req, res) {
+    res.send('Hello World!');
+});
+app.listen(3000, function () {
+    console.log('Example app listening on port 3000!');
+});
