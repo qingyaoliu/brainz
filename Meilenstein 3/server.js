@@ -14,12 +14,11 @@ res.send(data);
 })
 
 app.get('/api/players/fav',(req,res) =>{
-    fs.readFile('./players.json','utf-8',(err,data)=>{
-    console.log(data);
-data.filter('favorit'===true);
-res.send(data);
+   var json= JSON.parse(fs.readFileSync('./players.json','utf8'));
+    json.
+    res.send(json);
 })
-})
+
 app.get('/', function (req, res) {
     res.send('Hello World!');
 });
