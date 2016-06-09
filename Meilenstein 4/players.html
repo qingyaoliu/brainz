@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <title>The Brainz | Players </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="design/style.css">
+    <link rel="icon" href="img/favicon.ico">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+
+<body onload="getPlayers()">
+<header>
+    <ul>
+        <li><a href="home.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        <li><a href="addplayers.html"><i class="fa fa-user-plus" aria-hidden="true"></i> add player</a></li>
+        <li><a class="active" href="players.html"><i class="fa fa-users" aria-hidden="true"></i> players</a></li>
+        <li><a href="chat.html"><i class="fa fa-weixin" aria-hidden="true"></i> chat</a></li>
+    </ul>
+
+    <div>
+        <h1 id="title">The Brainz</h1>
+    </div>
+</header>
+<main>
+
+    <section id="tabelle">
+
+        <table class="test">
+            <thead>
+            <th colspan='3' onclick='activeClass()'><i class='fa fa-users' aria-hidden='true'></i> All</th>
+            <th colspan='3' onclick='activeClass()'><i class='fa fa-star' aria-hidden='true'></i> Favoriten</th>
+            <tr>
+                <td>Vorname, Nachname</td>
+                <td>Verein</td>
+                <td>Coach</td>
+                <td>Position</td>
+                <td>Nummer</td>
+                <td>Jahr</td>
+            </tr>
+            </thead>
+            <tbody id="data"></tbody>
+        </table>
+    </section>
+</main>
+<footer id="footer">
+    <a href="#"><img alt="self-Logo" src="img/brainz.png"></a>
+</footer>
+<script src="design/index.js"></script>
+</body>
+</html>
