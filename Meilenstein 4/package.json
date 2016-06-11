@@ -1,0 +1,15 @@
+{
+  "name": "brainz",
+  "version": "1.0.0",
+  "description": "Chat mit Node.js",
+  "author": "Elbasan, Marcel, Andrej",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndrejRu/brainz"
+  },
+  "dependencies": {
+    "express": "~4.0.0",
+    "socket.io": "~1.4.5"
+  },
+  "license": "MIT"
+}

@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="design/style.css">
-    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="../design/style.css">
+    <link rel="icon" href="../img/img/favicon.ico">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -29,19 +29,24 @@
 </header>
 <main>
     <section id="chat">
+        <div id="message"></div>
         <form name="chat">
             <p>
                 <label for="nachrichten" id="nachricht">Nachrichten:</label>
                 <textarea id="messages" name="messages" cols="80" rows="15" maxlength="140" readonly placeholder="Willkommen, bitte gebe deinen Usernamen ein"></textarea><br>
                 <label for="eingabe" id="username">Username:</label>
                 <input type="text" id="user_eingabe" size="15" name="eingabe"/><br>
+                <input id="senden" type="submit" value="senden" />
             </p>
         </form>
     </section>
 </main>
 <footer id="footer">
-    <a href="chat.html"><img alt="self-Logo" src="img/brainz.png"></a>
+    <a href="../public/chat.html"><img alt="self-Logo" src="../img/brainz.png"></a>
 </footer>
-<script src="design/index.js"></script>
+<script src="../javascript/index.js"></script>
+<script src="../javascript/chat.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="../node_modules/socket.io-client/socket.io.js"></script>    
 </body>
 </html>
