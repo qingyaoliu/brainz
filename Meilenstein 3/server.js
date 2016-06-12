@@ -7,6 +7,7 @@ app.use((req, res, next)=> {
     res.header('Content-Type', 'application/json');
     next();
 });
+
 app.route('/api/players')
     .get((req, res)=> {
         var json = 0;
@@ -44,28 +45,6 @@ app.route('/api/players/:id')
         }
         res.json({message: 'removed'})
     });
-/*
- app.get('/api/players', (req, res) => {
- fs.readFile('./players.json', 'utf-8', (err, data)=> {
- console.log('Got all Players');
- res.send(data);
- })
- });
-
- app.get('/api/players/fav', (req, res) => {
- var json = JSON.parse(fs.readFileSync('./players.json', 'utf8'));
- var array = [];
- for (var x in json) {
- array.push(json[x]);
- }
- array = array.filter((el)=> {
- return (el.favorit === true);
- });
- console.log(array);
- json = JSON.stringify(array);
- res.send(json);
- });
- */
 
 app.listen(3000, ()=> {
     console.log('Example app listening on port 3000!');
