@@ -1,31 +1,72 @@
 const express = require('express');
 const app = express();
-const fs=require('fs');
 
-app.get('/api/players',(req,res) =>{
-    fs.readFile('./players.json','utf-8',(err,data)=>{
-    console.log('Got all Players');
-    res.send(data);
-})
-})
+var players = require('./players.json');
 
-app.get('/api/players/fav',(req,res) =>{
-    var json= JSON.parse(fs.readFileSync('./players.json','utf8'));
-    var array= [];
-    for(var x in json){
-        array.push(json[x]);
-    }
-    var arrayfil=array.filter(function(el){
-        return (el.favorit===true);
+app.use((req, res, next)=> {
+    res.header('Content-Type', 'application/json');
+    next();
+});
+app.route('/api/players')
+    .get((req, res)=> {
+        var json = 0;
+        if (req.query.favorites === 'true') {
+            json = players.filter((x)=> {
+                return x.favorit === true;
+            });
+            res.send(json);
+        } else if (req.query.search) {
+            json = players.filter((x)=> {
+                return x.name.charAt(0).toLowerCase() === req.query.search.toLowerCase();
+            });
+            res.send(json);
+        } else {
+            console.log(players);
+            res.send(players);
+        }
     })
-    console.log(arrayfil)
-    res.send(array);
-})
+    .post((req, res)=> {
+        res.json('Player saved');
+    });
 
-function checkFav(value){
-    return 'favorit: true';
-}
+app.route('/api/players/:id')
+    .put((req, res)=> {
+        res.json({
+            message: 'Player update'
+        });
+    })
+    .delete((req, res)=> {
+        for (var i; players.lenght; i++) {
+            if (req.params.id === players[i].id) {
+                players.splice(i, 1);
 
-app.listen(3000, function () {
+            }
+        }
+        res.json({message: 'removed'})
+    });
+/*
+ app.get('/api/players', (req, res) => {
+ fs.readFile('./players.json', 'utf-8', (err, data)=> {
+ console.log('Got all Players');
+ res.send(data);
+ })
+ });
+
+ app.get('/api/players/fav', (req, res) => {
+ var json = JSON.parse(fs.readFileSync('./players.json', 'utf8'));
+ var array = [];
+ for (var x in json) {
+ array.push(json[x]);
+ }
+ array = array.filter((el)=> {
+ return (el.favorit === true);
+ });
+ console.log(array);
+ json = JSON.stringify(array);
+ res.send(json);
+ });
+ */
+
+app.listen(3000, ()=> {
     console.log('Example app listening on port 3000!');
 });
