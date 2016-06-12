@@ -1,32 +1,56 @@
-//Verbindung zum WebSocket Server wird hergestellt
-const socket = io.connect();
+$(document).ready(function () {
+    var socket = io();
+    var userEingabe = $('#name');
+    var messages = $('#text');
+    var username;
 
-socket.on('chat', function (data) {
-    $('#content').append(
-        // Name
-            $('<b>').text(typeof(data.name) != 'undefined' ? data.name + ': ' : ''),
-            // Text
-            $('<span>').text(data.text))
     
-    // nach unten scrollen
-    $('body').scrollTop($('body')[0].scrollHeight);
-});
-
-// Nachricht senden
-    function senden(){
-        // Eingabefelder auslesen
-        var name = $('#user_eingabe').val();
-        var text = $('#messages').val();
-        // Socket senden
-        socket.emit('chat', { name: name, text: text });
-        // Text-Eingabe leeren
-        $('#messages').val('');
-    }
-    // bei einem Klick
-    $('#senden').click(senden);
-    // oder mit der Enter-Taste
-    $('#messages').keypress(function (e) {
-        if (e.which == 13) {
-            senden();
+    /*
+        Die Funktion addUser() fügt einen neuen User/ usernamen hinzu 
+    */
+    function addUser() {
+        username = userEingabe.val();
+        if (username) {
+            userEingabe.val('');
+            socket.emit('add user', username);
         }
+    }
+   
+    /*
+        Die Funktion send() schickt die gewählte Nachricht ab, sofern Username und die Eingabe des Users (userEingabe) vorhanden sind  
+    */
+    function send() {
+        var message = userEingabe.val();
+        if (userEingabe && username) {
+            userEingabe.val('');
+            socket.emit('new message', message);
+        }
+    }
+
+    /*
+        Durch diese Funktion wird entweder das Formular abgeschickt und somit eine Nachricht für einen
+        User hinzugefügt oder ein neuer User wird angelegt
+    */
+        $('form').submit(function (e) {
+        e.preventDefault();
+
+        if (username) {
+            send();
+        } else {
+            addUser();
+        }
+
     });
+
+    /*
+        Hier wird entschieden, was übertragen wird. Entweder wird "Willkommen: und der gewählte Username" gesendet,
+        oder der Username + die Nachricht
+    */
+     socket.on('user accede', function (data) {
+        messages.append('Willkommen: ' + data.username + "\n");
+    });
+    
+    socket.on('new message', function (data) {
+        messages.append(data.username + ": " + data.message + "\n");
+    });
+});
