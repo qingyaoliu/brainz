@@ -29,12 +29,13 @@
 </header>
 <main>
     <section id="chat">
-        <form>            <center>
+        <form>
+            <center>
                 <label for="nachrichten" id="nachricht">Nachrichten:</label>
                 <textarea id="text"  cols="80" rows="15" maxlength="140" readonly placeholder="Willkommen, bitte gebe deinen Usernamen ein"></textarea><br>
                 <label for="eingabe" id="username">Eingabe:</label>
                 <input type="text" id="name" size="15" name="eingabe"/><br>
-                <input id="senden" type="submit" value="Senden" />
+                <input id="senden" type="submit" value="Senden"/>
             </center>
         </form>
         <ul id="content"></ul>
@@ -43,8 +44,8 @@
 <footer id="footer">
     <a href="../public/chat.html"><img alt="self-Logo" src="../img/brainz.png"></a>
 </footer>
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script> 
-<script src="/socket.io/socket.io.js"></script>       
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
 <script src="../javascript/chat.js"></script>
 </body>
 </html>
