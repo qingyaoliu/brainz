@@ -8,43 +8,48 @@ app.use((req, res, next)=> {
     next();
 });
 
-app.route('/api/players')
-    .get((req, res)=> {
-        var json = 0;
-        if (req.query.favorites === 'true') {
-            json = players.filter((x)=> {
-                return x.favorit === true;
-            });
-            res.send(json);
-        } else if (req.query.search) {
-            json = players.filter((x)=> {
-                return x.name.charAt(0).toLowerCase() === req.query.search.toLowerCase();
-            });
-            res.send(json);
-        } else {
-            console.log(players);
-            res.send(players);
-        }
-    })
-    .post((req, res)=> {
-        res.json('Player saved');
-    });
-
-app.route('/api/players/:id')
-    .put((req, res)=> {
-        res.json({
-            message: 'Player update'
+/* Als erstes Favoriten, dann die suche und dann alle ausgegeben */
+app.route('/api/players').get((req, res)=> {
+    var json = 0;
+    if (req.query.favorites === 'true') {
+        json = players.filter((x)=> {
+            return x.favorit === true;
         });
-    })
-    .delete((req, res)=> {
-        for (var i; players.lenght; i++) {
-            if (req.params.id === players[i].id) {
-                players.splice(i, 1);
-
-            }
-        }
-        res.json({message: 'removed'})
+        res.send(json);
+    } else if (req.query.search) {
+        json = players.filter((x)=> {
+            return x.name.charAt(0).toLowerCase() === req.query.search.toLowerCase();
+        });
+        res.send(json);
+    } else {
+        res.send(players);
+    }
+});
+app.route('/api/players').post((req, res)=> {
+    res.json({
+        message: 'Spieler wurde erfolgreich gespeichert'
     });
+});
+
+app.route('/api/players/:id').put((req, res)=> {
+    res.json({
+        message: 'Spieler mit der ID ' + req.params.id + ' wurde erfolgreich geupdatet'
+    });
+});
+app.route('/api/players/:id').delete((req, res)=> {
+    var removedPlayer = false;
+    for (var i in players) {
+        if (req.params.id === players[i]._id) {
+            players.splice(i, 1);
+            removedPlayer = true;
+        }
+    }
+    if (removedPlayer === true) {
+        res.json({message: 'Spieler:' + req.params.id + ' wurde erfolgreich gelöscht'})
+    } else {
+        res.json({message: 'Spieler:' + req.params.id + ' wurde nicht gefunden'})
+    }
+});
 
 app.listen(3000, ()=> {
     console.log('Example app listening on port 3000!');
