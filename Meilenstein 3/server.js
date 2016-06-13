@@ -52,5 +52,5 @@ app.route('/api/players/:id').delete((req, res)=> {
 });
 
 app.listen(3000, ()=> {
-    console.log('Example app listening on port 3000!');
+    console.log('Der Server läuft nun unter http://127.0.0.1: 3000');
 });
